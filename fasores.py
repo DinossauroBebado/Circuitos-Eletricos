@@ -32,7 +32,7 @@ def show_n(z):
 def dominio_tempo(z, w):
     print("-----------------------------------------------------------------------")
     print()
-    print(f"Cos{abs(z):.2f}({w:.2f}t +{math.degrees(cmath.phase(z)):.2f}")
+    print(f"Cos{abs(z):.2f}({w:.2f}t +{math.degrees(cmath.phase(z)):.2f})")
     print()
     print("-----------------------------------------------------------------------")
 
@@ -46,4 +46,15 @@ def solve_det(Z: list) -> int:
 
 
 def solve_sistem(Z: list, S: list) -> list:
+    for i, result in enumerate(np.linalg.solve(np.array(Z), np.array(S))):
+        print(f"Var{i} : ")
+        show_n(result)
     return np.linalg.solve(np.array(Z), np.array(S))
+
+
+def capacitor_complex(f, w):
+    return 1/(complex(0, w*f))
+
+
+def indutor_complex(l, w):
+    return complex(0, w*l)

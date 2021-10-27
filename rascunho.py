@@ -41,3 +41,24 @@ show_n(complex(6, 8)*complex(4, 3))
 res = (complex(-2.92, -2.56)*complex(0, 50))/complex(10, 61)
 show_n(res)
 dominio_tempo(res, 4)
+
+show_n(complex(20, 0)/complex(30, 10))
+
+Z = [[complex(2, 1), complex(0, -1)],
+     [complex(-4, 1), complex(-0.6, -0.8)]]
+
+S = [10, 0]
+
+r = solve_sistem(Z, S)[1]*(3/complex(3, 1))
+
+show_n(r)
+
+dominio_tempo(r, 1000)
+
+g = 1/complex(0, -4) + 6/10
+
+c = 4.8/g
+
+a = 12
+
+show_n((a - c)/2)
