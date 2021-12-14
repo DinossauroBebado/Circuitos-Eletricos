@@ -12,7 +12,7 @@ show_n(y)
 
 show_n(x+y)"""
 
-r = complex(0, 11)
+'''r = complex(0, 11)
 j = complex(16, 0)
 
 k = complex(4, 20) + paralelo(r, j)
@@ -62,3 +62,13 @@ c = 4.8/g
 a = 12
 
 show_n((a - c)/2)
+'''
+capacitor_complex(not_cientifica(40, 'u'), 1000)
+
+i_tw = (-180+150j)/(40-5j)
+
+ix = 6 + i_tw
+
+show_n(Irsm(ix))
+
+potencia_media_resistor_rms(abs(Irsm(ix)), 50)

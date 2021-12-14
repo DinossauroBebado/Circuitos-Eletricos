@@ -53,8 +53,38 @@ def solve_sistem(Z: list, S: list) -> list:
 
 
 def capacitor_complex(f, w):
-    return 1/(complex(0, w*f))
+    z = 1/(complex(0, w*f))
+    show_n(z)
+    return z
 
 
 def indutor_complex(l, w):
-    return complex(0, w*l)
+    z = complex(0, w*l)
+    show_n(z)
+    return z
+
+
+def potencia_media_resistor(I, R):
+    pot = (1/2)*I**2*R
+    show_n(pot)
+    return abs(pot)
+
+
+def potencia_media_resistor_rms(I, R):
+    pot = I**2*R
+    show_n(pot)
+    return abs(pot)
+
+
+def not_cientifica(number, base):
+    notação = {'k': 1000, 'm': 1/1000, 'u': 1/1000000,
+               "n": 1/1000000000, "p": 1/1000000000000}
+    return number*notação[base]
+
+
+def Irsm(I):
+    return I/(2**(1/2))
+
+
+def Vrsm(V):
+    return V/(2**(1/2))
